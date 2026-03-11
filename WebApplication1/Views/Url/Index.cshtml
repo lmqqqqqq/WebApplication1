@@ -21,7 +21,9 @@
         <tr>
             <td>@item.OriginalUrl</td>
             <td>
-                <a href="/@item.ShortCode">@item.ShortCode</a>
+                <a href="/@item.ShortCode">
+                    @Context.Request.Scheme://@Context.Request.Host/@item.ShortCode
+                </a>
             </td>
             <td>@item.CreatedAt</td>
             <td>@item.ClickCount</td>
